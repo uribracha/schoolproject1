@@ -1,0 +1,22 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h1>animal album</h1>
+    <table class="table-bordered p-3 m-3" style="border-collapse:separate; border-spacing:10px 10px;">
+        <tbody>
+            <tr>
+                {% for i in range(0,6)%}
+                {%if i%2==0 %}
+            <tr>
+                {% endif %}
+                <td>
+                    <img src="{{picturelist[i]}}" alt="{{altlist[i]}}" width="200" height="200" />
+                </td>
+            
+                {%endfor%}
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
